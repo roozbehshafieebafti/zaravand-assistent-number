@@ -1,6 +1,6 @@
 {
   "name": "zaravand-assistent-number",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "this library convert English numbers to Persian numbers with some other options",
   "main": "index.js",
   "scripts": {
