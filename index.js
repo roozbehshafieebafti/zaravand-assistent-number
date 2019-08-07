@@ -14,6 +14,22 @@ NumberAssistent.prototype.number = function(input) {
   return input;
 };
 
+
+// این تابع عدد فارسی  ورودی را به صورت انگلیسی برمی‌گرداند
+NumberAssistent.prototype.Enumber = (input) => {
+  if (input) {
+    input = String(input);
+    if (input && input.length) {
+      input = input.replace(/,/g, '');
+      return input.replace(/[۰-۹]/g, function(x) {
+        return String.fromCharCode(x.charCodeAt(0) - 1728);
+      });
+    }
+    return '';
+  }
+  return input;
+}
+
 // این تابع تمامی اعدادی که در ورودی باشند را سه رقم سه رقم با علامت 
 // ,
 // از هم جدا می‌کند
